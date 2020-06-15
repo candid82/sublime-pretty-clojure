@@ -1,0 +1,6 @@
+{
+  "cmds": [
+    ["joker", "--format", "-"]
+  ],
+  "format_on_save": true
+}

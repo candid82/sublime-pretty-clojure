@@ -16,14 +16,14 @@
                 "caption": "Settings – Default",
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/cljpprint/cljpprint.sublime-settings"
+                  "file": "${packages}/cljpprint/Cljpprint.sublime-settings"
                 }
               },
               {
                 "caption": "Settings – User",
                 "command": "open_file",
                 "args": {
-                  "file": "${packages}/User/cljpprint.sublime-settings"
+                  "file": "${packages}/User/Cljpprint.sublime-settings"
                 }
               },
               {

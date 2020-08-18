@@ -164,7 +164,12 @@ class CljpprintCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         if not is_clojure_source(self.view):
             return
-        run_formatter(edit, self.view, [sublime.Region(0, self.view.size())])
+
+        # Format selected text, or the whole buffer in case no text is selected.
+        regions = list(filter(lambda r: r.begin() != r.end(), self.view.sel()))
+        regions = regions if regions else [sublime.Region(0, self.view.size())]
+
+        run_formatter(edit, self.view, regions)
 
 
 class CljPpprintListener(sublime_plugin.EventListener):
